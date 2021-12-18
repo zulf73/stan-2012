@@ -1,0 +1,116 @@
+\documentclass{amsart}
+\usepackage{graphicx}
+\graphicspath{{./}}
+\usepackage{hyperref}
+\usepackage{csvsimple}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{epigraph}
+\title{Zulf Ruminates On My Undergraduate Functional Analysis And Analysis Education With Stanford Spring 2012 Analysis Problem 3}
+\author{Zulfikar Moinuddin Ahmed}
+\date{\today}
+\begin{document}
+\maketitle
+
+\section{Stanford Analysis Qual Spring 2012 II.3}
+
+Let $F$ be Fourier transform on Schwartz functions.
+
+(a) Show that there is a compactly supported function $\phi$ on $\mathbf{R}$ with $\phi\ge 0$ and $\phi(0)>0$ and $F\phi(0) >0$.
+
+(b) For a compactly supported distribution $u$ prove
+\[
+|D^{\alpha} Fu(\xi)| \le C_{\alpha}(1+|\xi|)^N
+\]
+for all multi-indices $\alpha \in \mathbf{N}^n$.
+
+
+\section{Returning To Trusty Stein-Weiss Fourier Analysis On Euclidean Spaces}
+
+I don't think this problem is hard, but since I attended Princeton and took classes with the great Elias Stein, I would rather review the issues of Schwartz  distributions before doing this problem.  
+
+\section{When Is The Fourier Transform Of  A Function Real?}
+
+Unfortunately I am lost here and don't have a sense yet.  So let's start simply.  Suppose $f \in C^{\infty}_0(\mathbf{R})$.  Since we're looking at {\em compactly supported functions}, might as well just make the situation concrete and look at $I=[A,B]$ a simple closed interval and assume $f=0$ on $\mathbf{R}-I$.  And let's write the Fourier transform in cosine and sines.
+
+\[
+g(\xi) = \int_A^B f(x) \cos(x\xi) dx + i \int_A^B f(x) \sin(x \xi) dx
+\]
+
+Immediately we can conclude that $g$ is purely real-valued without imaginary part if and only if 
+\[
+\int_A^B f(x) \sin(x\xi) dx = 0
+\]
+for all $\xi \in \mathbf{R}$.  Then we say, "Ah, so in this case we are looking for some sort of end point condition on $A$ and $B$ to ensure vanishing of some sort of average."  
+
+For my dear readers, I will emphasize that when one is totally not sure of what the answer will be, then making seemingly wise comments with various "Ah! So I see this and that" may seem frivolous but is important part of the process of discovery.  
+
+Now I use my conjecturing skills with confidence in my mathematical intuition.  I want to let $A=-\pi$ and $B=\pi$, chosen because sine function is odd and
+\[
+\int_{-\pi}^{\pi} \sin(x) dx = 0
+\]
+Then I conjecture:  for $f$ any smooth function that is {\em even}, i.e. $f(x)=f(-x)$, smooth, and with the property that $f(x) = 0$ for $|x| > \pi$, we ought to have
+\[
+\int_{-\pi}^{\pi} f(x) \sin(x\xi) = 0
+\]
+for all $\xi \in \mathbf{R}$.
+
+Given the truth of this conjecture, we can construct the required function $f$ by a bump function that smoothly goes to zero near $\pi$ and $-\pi$ from a peak {\em symmetrically} around the origin.  The cosine function is positive on $(-\pi,\pi)$ so the Fourier transform will be positive at zero since $\cos(0)=1$.  And that solves (a).
+
+
+Where did this intuition develop?  Well I obtained a 5 on Calculus BC in tenth grade in 1988, and at Princeton 1991 freshman year I had many analysis problems.  This is at the level of baby Rudin, this intuition.  
+
+\section{Bounding Fourier Transform Derivatives of Compactly Supported Distribution}
+
+Some people like fancy hats and various exotic symbols for Fourier transform.  I just use $F$ here.
+
+Let's recall what smoothness will mean and what compact support will mean for distributions.  We mean by distributions linear functionals in Schwartz functions $\mathcal{S}(\mathbf{R}^n)$.
+
+Let $u$ be a compactly supported distribution.  We will deviate a bit from the problem specifications and consider distributions as the dual of $C^\infty_0(\mathbf{R}^n)$ rather than $\mathcal{S}(\mathbf{R}^n)$ because I am not sure yet what a compactly supported distribution is on Schwartz functions.
+
+  What that will mean is the following.  There is a compact set $K \subset \mathbf{R}^n$ such that for all $g \in C^{\infty}_0( \mathbf{R}^n )$ with $g=0$ on $K$, we have
+\[
+u(g) = 0
+\]
+In other words, the distribution annihilates all function with support outside $K$.
+
+Now we just ignore mathematical precision and throw it to the wind, as all great men have always done, and just {\em pretend} this is sensible for Schwartz functions. 
+
+Now we use the symbolic trick that is the bread and butter of Fourier analysis where derivatives turn to polynomials in Fourier transform.  Fine there is something beautiful about symbols of pseudodifferential operators and so on but we don't want to be subtle but rather lazy.
+
+\[
+F(D_x^{\alpha} g)(\xi) = \xi^{\alpha} Fg(\xi)
+\]
+This holds for $g \in \mathcal{S}(\mathbf{R}^n)$.
+
+Now let's step back and try to get something from derivatives of the Fourier transform of the compactly supported distribution $u$.  Let $\phi$ be a test function.
+
+\[
+D_{\xi}^{\alpha} Fu(\phi)(\xi) = D_{\xi}^{\alpha} u( F\phi(\xi) )
+\]
+Great great.  Now we can just push the $D_{\xi}^{\alpha}$ into the $u$ and get
+\[
+ u( \xi^{\alpha} F\phi) (\xi)
+\]
+Just re-arrange a bit.
+\[
+D_{\xi}^{\alpha} Fu(\phi)(\xi) = \xi^{\alpha} u( F\phi) (\xi)
+\]
+This is close to proving (b) but not there quite yet.  Fine, we could get the result by a uniform bound like:
+
+\[
+| F\phi(\xi) | \le C
+\]
+and that's not hard with an $L^1$ estimate like
+\[
+| F\phi(\xi) | \le \| \phi \|_{L^1}
+\]
+that just comes from 
+\[
+|e^{-i x \xi} | \le 1
+\]
+That will do it.
+
+
+
+\end{document}

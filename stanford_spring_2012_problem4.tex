@@ -1,0 +1,69 @@
+\documentclass{amsart}
+\usepackage{graphicx}
+\graphicspath{{./}}
+\usepackage{hyperref}
+\usepackage{csvsimple}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{epigraph}
+\title{Zulf's Stanford Analysis 2012 Qual Problem 4}
+\author{Zulfikar Moinuddin Ahmed}
+\date{\today}
+\begin{document}
+\maketitle
+
+\newcommand{\zbar}{\bar{z}}
+
+\newcommand{\ddzbar}[1]{\ensuremath{\frac{\partial{#1}}{\partial\bar{z}}}}
+
+\newcommand{\ddz}[1]{\ensuremath{\frac{\partial{#1}}{\partial z}}}
+
+\section{Problem 4}
+
+Suppose $f,g$ are holomorphic in open set $\\Omega \subset \mathbf{C}$ and $|f|^2 + |g|^2$ is constant.  Show $f$ and $g$ are both constant.
+
+\section{The Derivative Approach}
+
+If $f$ is holomorphic, we have 
+\[
+\ddzbar{f} = 0
+\]
+
+What we want to do is just take partial derivatives in $z$ and $\bar{z}$ of $|f|^2 + |g|^2$ and set it equal to zero and then attempt to deduce that 
+\[
+\ddz{f} = 0
+\]
+and
+\[
+\ddz{g} = 0
+\]
+In order to see if this approach leads to something without a messy calculation, let's just try to prove a simpler statement.  We want to prove if $|f|^2$ is constant then $f$ is constant when $f$ is holomorphic.
+
+\begin{align*}
+\ddzbar{|f|^2} &= \ddz{ f\bar{f}}\\
+ &= \ddz{f} \bar{f} + f \ddz{\bar{f}}\\
+ &= f \ddz{\bar{f}}.
+\end{align*}
+This is from a conjugate magic. Then we assume $f\not= 0$ since otherwise we have constant $f=0$, and then divide 
+\[
+0 = \ddz{f} f
+\]
+by $f$ and we have in addition to 
+\[
+\ddzbar{f}=0
+\]
+the derivative in the orthogonal $\zbar$ direction also zero and can conclude $f$ is constant.
+
+Now let's do the same for $|f|^2 + |g|^2$. Taking $\zbar$ derivatives here,
+\[
+\ddzbar{(|f|^2+|g|^2)} = f \ddzbar{\bar{f}} + g \ddzbar{\bar{g}}
+\]
+Now let's see.  If either $f$ or $g$ is identically zero, our previous argument gives the result, so let's assume $f,g\not=0$.  
+
+We use
+\[
+\bar{f}\ddz{f} + \bar{g}\ddz{g} = 0
+\]
+in the region $\Omega$.  We can get $bar{g}/\bar{f}$ is holomorphic from this.  
+\end{document}
+

@@ -1,0 +1,77 @@
+\documentclass{amsart}
+\usepackage{graphicx}
+\graphicspath{{./}}
+%\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+%\usepackage{url}
+\usepackage{csvsimple}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{epigraph}
+\title{Zulf's Stanford Analysis 2012 Qual Problem II.5}
+\author{Zulfikar Moinuddin Ahmed}
+\date{\today}
+\begin{document}
+\maketitle
+
+\section{Importance Of This Problem}
+
+I learned the Sobolev Embedding Theorem from geometers during my undergraduate education and at the time Donaldson Theory was new.  I took the class of John Morgan on Four-Manifolds Theory and gained some good background in Sobolev Embedding Theorem and Elliptic Regularity.  Then I studied the work of Karen Uhlenbeck and Clifford Henry Taubes and others.  
+
+Now Sobolev theory is actually important since our universe has compact absolute space that is $S^4(R)\times\mathbf{R}$ with separate time dimension.  I personally pioneered serious work on Four-Sphere physics.  Steven Hawking and Gerard T'Hooft had made some overtures in this direction but they did not produce a crisp comprehensive theory with a fixed homogeneous geometry.  I have claimed that this is {\em absolute truth} and so Four-Sphere Theory will stand eternally as the final theory of macroscopic theoretical physics.
+
+\section{Stanford Spring 2012 Analysis Qual II.5}
+
+For $s \ge 0$ let $H^s(\mathbf{T}^n)$ be the $f \in L^2(\mathbf{T}^n)$ with 
+\[
+\| f \|_s^2 < \infty
+\]
+where
+\[
+\| f \|_s^2 = (2\pi)\sum_{n=1}^\infty (1+n^2)^s |\hat{f}_n|^2 
+\]
+
+(a) Show that for $r > s \ge 0$ the inclusion map
+\[
+i: H^r(\mathbf{T}) \rightarrow H^s(\mathbf{T})
+\]
+is compact.  
+
+(b) Show that for $s > 1/2$ there is an inclusion of $H^s(\mathbf{T})$ into $C(\mathbf{T})$ and indeed the inclusion is compact.
+
+\section{Continuity And Compactness Are Inequalities}
+
+One of the major themes in functional analysis is that topological issues translate into inequalities.  The Sobolev Theory has gained tremendously from this translation.  The compactness of these embeddings like 
+\[
+H^r(\mathbf{T})\rightarrow H^s(\mathbf{R})
+\]
+are huge and monumental great fundamental results that have totally transformed all of mathematics since their first appearance.  They are so important that it is impossible to do anything in geometric analysis without them.  
+
+Of course the theme of continuity and inequalities are general Banach space notions.  Suppose you have $T \in L(X,Y)$ for Banach spaces.  Then continuity is {\em equivalent} to 
+\[
+\| Tx \|_Y \le C \| x \|_X
+\]
+One is analytic when one considers this translation second nature.
+
+In this case of Sobolev spaces, we want to show
+\begin{equation}
+\label{Sobolev}
+\| f \|_s \le C \| f \|_r
+\end{equation}
+
+This will show continuity.  Then we want to take bounded sequences in $H^r(\mathbf{T})$ and show they are in precompact sets in $H^s(\mathbf{T})$. They will amount to using \eqref{Sobolev} to coerce a Cauchy condition.
+
+The beautiful thing about this problem is that the moment I tell you the story, it's obvious.  For the first part,
+\[
+(1+n^2)^s \le (1+n^2)^r
+\]
+and so we get \eqref{Sobolev}.  For the second part, start with a bounded sequence $\varphi_j \in H^r(\mathbf{T})$ then just use \eqref{Sobolev} to produce the Cauchy criterion for convergence of the subsequence.  These assume you know that these $H^s(\mathbf{T})$ and $H^r(\mathbf{T})$ are {\em complete}.
+
+For (b) it's the same idea, but this time, you need a bit more care with the inequality.  You want
+\[
+\| f \|_{1/2}^2 \le  A \| f \|_{C(X)}
+\]
+
+
+
+\end{document}

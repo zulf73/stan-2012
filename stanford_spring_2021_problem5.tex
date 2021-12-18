@@ -1,0 +1,133 @@
+\documentclass{amsart}
+\usepackage{graphicx}
+\graphicspath{{./}}
+\usepackage{hyperref}
+\usepackage{csvsimple}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{epigraph}
+\title{Zulf Ruminates On My Undergraduate Functional Analysis And Analysis Education With Stanford Spring 2012 Analysis Problem 5}
+\author{Zulfikar Moinuddin Ahmed}
+\date{\today}
+\begin{document}
+\maketitle
+
+At Princeton, I took Functional Analysis with Peter Sarnak during my junior year.  It must have been 1993-1994.  I did well in the course, but even with my efforts I only got an A-.  I worked quite a bit for that grade.  The class was attended by Terry Tao, who is a Fields Medalist, as well as the late Steven Gubser who had gone on to renown in String Theory.  I am a bit rusty now in my old age, at 49, and I thought to recall some of the thrill by examining Stanford Ph.D. qualifying Analysis exam Spring 2012 Problem 5.  
+
+You see, I was never actually enthusiastic about partial differential equations.  I did my thesis in Several Complex Variables and received the prize for the most original thesis in 1995.  There I used some good functional analysis from H\"ormander's Several Complex Analysis work.  Peter Sarnak was much more concerned with applications in Hecke operators of spectral theorem for compact operators.
+
+I did read Elias Stein's {\em Singular Integrals and Differentiability Properties of Functions}.  I was not enthusiastic about extremely abstract functional analysis at all.  I had an abhorrence in those days of what I considered pathologies.  But today I will consider some of these things.  I will overcome my prejudices today.  It's about time, now that death looms.
+
+\section{How Bill Gates Shows Bird-Brain Intelligence}
+
+Bill Gates likes to repeat 'trivia' for things that are too difficult for him to grasp.  My view is that people who repeat 'trivia' are exhibiting bird level intelligence.
+
+\includegraphics[scale=0.1]{trivia.jpg}
+
+No, Bill Gates theorems in functional analysis are not trivia.  They are quite subtle and powerful.  Let me just quote the Wikipedia for you.
+
+"The practical use of distributions can be traced back to the use of Green functions in the 1830s to solve ordinary differential equations, but was not formalized until much later. According to Kolmogorov \& Fomin (1957), generalized functions originated in the work of Sergei Sobolev (1936) on second-order hyperbolic partial differential equations, and the ideas were developed in somewhat extended form by Laurent Schwartz in the late 1940s. According to his autobiography, Schwartz introduced the term "distribution" by analogy with a distribution of electrical charge, possibly including not only point charges but also dipoles and so on. Garding (1997) comments that although the ideas in the transformative book by Schwartz (1951) were not entirely new, it was Schwartz's broad attack and conviction that distributions would be useful almost everywhere in analysis that made the difference."
+
+Now Sergei Sobolev was doing some very sophisticated work and so was Laurent Schwartz.  Distribution theory did not even exist before 1936.  They are extremely recent innovations in mathematics.  Paul Dirac introduced delta "functions" in his 1930 book and mathematicians were extremely suspicious of it.  Delta is not a function at all and in the end it was Laurent Schwartz whose book of 1951 that allowed legitimate understanding of Dirac's delta functions as distributions.
+
+These stupid illiterate people like Bill Gates with high school education call things 'trivia' when they don't even have enough education to understand the history of intellectual developments of mathematics.  Fortunately Zulf is still alive and can assure the world that both Sergei Sobolev and Laurent Schwartz were mathematical geniuses of greatest stature and their work has advanced mathematical understanding in profound ways of Partial Differential Equations since 1951.
+
+Now my fundamental S4 Electromagnetic Equation that drives all of nature is a classical wave equation, or hyperbolic differential equation.  And it is a vast correction of the well-meaning but erroneous {\em Maxwell's Equations} and more interesting but wrong {\em Schroedinger's Equation}.  My S4 Electromagnetic Equation is the final law of macroscopic physics, and not those of James Clerk Maxwell or Erwin Schroedinger.  Obviously I am going to be quite grateful for the efforts of Sergei Sobolev and Laurent Schwartz, because I am rather lazy and like other people to do great work that I can leverage for my own immortal genius.
+
+I won't go into the theory of hyperbolic differential equations.  I am just going to be looking at a single problem.
+
+I am not preparing for any formal exam, so I will just be doing this my way and not worry about formalities.  
+
+\section{Problem 5 Stanford Analysis Spring 2012}
+
+Suppose $X,Y$ are reflexive separable Banach spaces.  Suppose $X^*$ and $Y^*$ are their duals.  Let $P \in L(X,Y)$ be a bounded linear operator.  Let $P' \in L(Y^*, X^*)$ be its adjoint. 
+
+Suppose $P'$ satisfies the following property.  There exists a Banach space $Z$ and a {\em compact} linear operator $i:Y^*\rightarrow Z$ and a constant $C>0$ such that for all $\varphi \in Y^*$,
+\[
+\| \varphi \|_{Y^*} \le C( \| P' \varphi \|_{X^*} + \| i \varphi \|_Z)
+\]
+
+With the above setting, the problem is to prove certain propositions.
+
+(a)  Prove that $Ker(P')$ is finite dimensional.  
+
+(b) Let $V$ be a closed subspace of $Y^*$ such that
+\[
+Y^* = V \oplus Ker(P')
+\]
+Show that there is a $C' >0$ such that for all $\varphi \in V$,
+\[
+\|\varphi\|_{Y^*} \le C' \| P' \varphi \|_{X^*}
+\]
+
+(c) Show that for $f\in Y$ with $\ell(f)=0$ for all $\ell \in Y^*$, there exists a $u \in X$ such that $Pu = f$.
+
+That is the problem.  We're going to take a relaxing stroll through the problem because we're 49 years old and we don't like to do things efficiently any more.
+
+\section{Some Basic Ideas}
+
+The issues of this problem go back to the work of Erik Ivar Fredholm from around 1900, which really began functional analysis of operators.  He was interested in solving some integral equations.  Linear operators with finite dimensional kernel that are invertible in the complement of the kernel are some of the properties of {\em Fredholm Operators}.  This problem is to show some operators are of this class in a fairly general abstract situation.  The last part (c) is asking us to show that solution $u$ exists for the equation $Pu=f$ when $f \in Y$ is given.
+
+Just hold on and relax, we'll get to proving things in a while.  The major issue here is to establish {\em existence of solutions} to certain sorts of equations.  That's the mathematical substance of this problem.  What is quite amazing about this problem is that over the twentieth century, mathematicians had refined their analytical concepts so sharply, that all the properties are abstracted to the point where a mild extension of linear algebra leads to proving that solutions shall exist for partial differential equations $Pu=f$.  That is truly breathtaking.  So this is a very interesting problem if you put things in context of concrete partial differential equations.  
+
+How do you know that $Pu=f$ will have a solution?  Well you do this hookey dookey with the duals and some Banach space manipulation, put together some very general arguments of fairly abstract technical conditions, and voila, you've proven that all manner of partial differential equations describing currents under the sea picking your bones in whispers, and as you rose and fell you pass the stages of your age and youth, entering the whirlpool, and then you can exhort those who turn the wheel and look to windward about how you were once handsome and tall as them.  The connection between those sorts of things in the external world, which seem quite mystical, haunting, to the question of how do we know that this sort of equation written down 
+\[
+Pu = f
+\]
+and knowing that you can invoke some abstract functional analysis is quite marvelous to me.  
+
+\section{Fundamental Difference Between Study of Other People's Great Advances and Your Own}
+
+I am a great scientific genius who has made profound advances to human knowledge myself already, with {\em Four-Sphere Theory} and my work on Univeral Human Moral Nature and others.  I am no longer a student who has his sole goal to absorb and master other people's work, the great geniuses of the past.
+
+The purpose of the Stanford Mathematics Ph.D. qualifying exam is to ensure that aspiring mathematicians have solid mastery of things done by our illustrious past geniuses.  My advances had been in natural sciences, not in Mathematics.
+
+I can speak from experience and say that having made great new advances following my own methods and ideas and thought is different from mastering work of others.  One does not lead to excellence in the other at all.  It takes me time to understand what the issues are of work in analysis, and this problem, for example is the refinement of understanding that began in 1936 and was worked through the 1960s until it reached a sharpness where graduate students in mathematics could consider them part of their tools of the trade of mathematical analysis.
+
+They are not easy for me, but I have a different appreciation for the profundity of the advances in human intellect represented in the problems.  I am filled with gratitude to those who had been the pioneers.
+
+\section{Turning To Barry Simon's Textbooks}
+
+I am not a child, and do not hesitate to turn to textbooks to clarify my understanding.  I recall here that a compact operator that takes bounded sets to pre-compact sets.  In our problem we have this inequality 
+\[
+\| \varphi \|_{Y^*} \le C ( \| i \varphi \|_Z)
+\]
+for $\varphi \in Ker(P')$.  I see, we're going to use this to get a convergent subsequence from the right side.  
+
+So let 
+\[
+S=\{ \varphi \in Y^*: P'\varphi = 0 \mathrm{ and } \| \varphi \|_{Y^*} \le 1 \}
+\]
+We will show finite dimensionality as follows.  We will show $S$ is precompact in $Y^*$ and that will ensure finite-dimensionality since only finite dimensional balls can be pre-compact in Banach spaces.  
+
+Consider $\phi_j \in S$, find a subsequence of $i\phi_j$ that converges in $iS \subset Z$, because $S$ is bounded, and so $iS$ is pre-compact.  Now use the inequality to coerce subsequence convergence say by Cauchy criterion.  That will be the crux of (a).
+
+For (b) we will have to have some sense of the various equivalents of Closed Graph Theorem or Open Mapping Theorem or Inverse Mapping theorem.  These will allow us to get bijective mapping in the complement of $Ker(P')$, and theorem will give us a bounded inverse which we will eventually incorporate into the constant $C'>0$.
+
+For (c) we use (b) as $\ell(f)=0$ for all $\ell \in Ker(P)$ implies $\ell \in V$.  Then 
+\[
+\| \ell \|_{Y^*} \le C' \| P'\ell \|_{X^*}
+\]
+I will now think about this some more.
+
+I see, so $V^* \subset Y$ will have a linear isomorphism by a duality map {\em because $X,Y$ are reflexive}.  Let's say $\delta_Y: Y\rightarrow Y^*$ is the duality map.  It's an isomorphism everywhere, and we look at $\delta_Y \circ P': Y \rightarrow X^*$.  This is a bijection on $V^*$ as on the second leg we have the bijection from (b).  Then we get our bounded inverse from the Bounded Inverse Theorem.  Then we want to show that 
+\[
+Q = (\delta_Y \circ P'|_{V^*})^{-1}
+\]
+is going to give us a solution for $Pu = f$ in other words
+\[
+u = Qf
+\]
+will solve $Pu=f$.  
+
+So the ideas are becoming clearer for the solution to the problem. 
+
+You see, for me 'reflexive separable Banach spaces' and such things are frankly meaningless.  I see these are abstractions that proved valuable to know that we can prove that solutions for partial differential equations exist.  All the technical conditions are just scaffolding and I get pretty lost without having some sense of the sort of equations we are interested in solving, which are partial differential equations describing natural phenomena.  I mean it's nice that we can just say "Ah, $Y$ is reflexive, so duality map $\delta_Y$ is going to be an isomorphism" but the deep substance is not here.  The deep substance is that some of the spaces of functions where partial differential operators are defined are going to be reflexive after some effort, and then we can "apply" this theorem.  I really don't like that way of thinking about things.  I would prefer that the properties of function spaces are not detached floating aimlessly in space from the function spaces that matter, things like $L^2$ completion of $C^2(\mathbf{R}^n)$.  Well, I am not going to enter this space myself, so I won't complain.
+
+
+
+
+
+
+
+\end{document}

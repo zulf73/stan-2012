@@ -1,0 +1,103 @@
+\documentclass{amsart}
+\usepackage{graphicx}
+\graphicspath{{./}}
+%\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+%\usepackage{url}
+\usepackage{csvsimple}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{epigraph}
+\title{Zulf's Stanford Analysis 2012 Qual Problem II.1}
+\author{Zulfikar Moinuddin Ahmed}
+\date{\today}
+\begin{document}
+\maketitle
+
+\section{Problem II.1 Stanford Ph.D. Qual Analysis Spring 2012}
+Suppose $X$ is a compact metric space and $\ell$ is a positive linear functional on $C(X)$ i.e. $\ell(f)\ge 0$ when $f\ge 0$.  Suppose $K \subset X$ is compact and we have $O_j \ge \bar{O_{j+1}}$ with 
+\[
+\bigcap_j O_j = K
+\]
+Let $f_j$ be a sequence with $f_j=0$ on the complement of $O_j$ and $f_j=1$ on $K$. Show that 
+\[
+\lim_{j\rightarrow \infty} \ell(f_j)
+\]
+exists and is independent of choices $O_j$ and $f_j$.
+
+\section{Thoughts On The Problem}
+
+You know years ago, when I was an undergraduate, I was not keen on analysis, but I was well-versed in topology and geometry of manifolds.  I looked up some chapters of various books like Wells {\em Differential Analysis on Complex Manifolds} or Sigurdur Helgason's {\em Differential Geometry} and felt secure about theorems about {\em partitions of unity}.  I was not going to get into all manner of pathological situations and stay in the {\em smooth category}.  But you know, life happens, and I had no idea that I would even spiral out so far from mathematics then at all.  Now things are quite far from those happy times when I was well-regarded as having mathematical talent at Princeton, living in Allen Texas in my aunt's house enduring verbal abuse and denigration that is intolerable, having Bill Gates obstruct my legitimate income of \$620 million in Finance, with diabetes, a sister who committed suicide in 2017, an ailing mother, and the United States Government colluding with a racial murderer to destroy me.  These are strange conditions I had not foreseen at all.  And that's the strange and beautiful thing about nature and fate.  Fate is what governs the entire universe, and we have very little understanding of Fate.  All scientific models of how things will be are vastly inadequate.
+
+\section{My Attitude Towards Mathematics When I Went To Work With Daniel Stroock}
+
+I learned mathematics at Princeton from geometers and topologists.  I knew that Elias Stein and Joe Kohn and others were very high in Analysis but I had picked up the attitude that truly visionary genius in Mathematics came from topology and geometry and not from analysis.  I thought these analysts are our spare parts makers.  They are quite in love with little subtleties and clever craftsmanship and we wanted them to do a great deal of work so we could use some of their theorems and wax poetic about standing on the shoulders of genius while in fact we did not want to do all the nitty gritty work.  We wanted to prove grand theorems {\em using} their work and gain greatness in eternal history of mathematical genius.  I would look at analysis more or less like the sort of thing that really clever Putnam competitors do, ah prove that such a such function can behave wildly and move around a lot in the dirty pond water and can give you an electric shock too.  Weierstrass, the father or rigour in Mathematics was not our hero.  Our hero was Bernhard Riemann, who did not prove existence of the minimizer of 
+\[
+\int |\nabla u|^2
+\]
+to find harmonic functions.  We thought that all these analysts were good, because they are all acolytes of Weierstrass.  I used to say "Thank Heavens for these fellows.  They are hard working and robust, and will give us many little lemmas and work hard so we may prove {\em truly marvelous} theorems without doing all the work they are doing." I was convinced that if the thing moves around in wild manners and gives electric shock when you come near it, another man ought to be the hero, because my fair maidens are fine with more topological and geometric results.  Unfortunately, Daniel Stroock was not aware of my culture, mostly because I was young and did not know enough about mathematical cultures.
+
+
+
+But it's nice to consider some of these problems.  When I was seduced during high school by Mathematics I remember having a poster with Alfred North Whitehead's saying I think, yes that's right.
+
+"I will not go so far as to say that to construct a history of thought without profound study of the mathematical ideas of successive epochs is like omitting Hamlet from the play which is named after him. That would be claiming too much. But it is certainly analogous to cutting out the part of Ophelia. This simile is singularly exact. For Ophelia is quite essential to the play, she is very charming-and a little mad. Let us grant that the pursuit of mathematics is a divine madness of the human spirit, a refuge from the goading urgency of contingent happenings."
+
+\section{Zulf Stops The Tomfoolery To Examine The Problem}
+
+Let us then return to some mathematics because the goading urgency of contingent happenings is a bit outrageous in my life at the moment.
+
+What are we going to be proving here?  Ah yes, we want to show that a limit exists for $\ell(f_j)$ with all these various conditions.  Now the first good thing is that these things, $\ell(f_j)$ are just real numbers.  That's a relief, because with just real numbers, we have a bit more facility.  
+
+What else is here?  We have $0 \le f_j(x) \le 1$ and that's good because we do have $f_j\ge 0$ for all $j$.  Let's name them so they seem familiar from the first analysis course from baby Rudin.  That's right, at Princeton mathematics students study {\em Linear Algebra} and {\em Analysis} during freshman year.  The second semester of freshman year 1991-1992 I actually skipped and did some other things, let's just name these things.
+\[
+a_j = \ell(f_j)
+\]
+Very nice, we have this sequence $a_j \ge 0$, and we want to prove that this sequence has a {\em limit}.  
+
+\section{The Geometer's Handwaving Intuition}
+
+The geometer's way of doing this is to draw some pictures on the blackboard and say "Ah, the limit is the indicator function on $K$. Oh I see, it won't stay in $C(X)$.  That's a wrap!  Let's get an analyst to do it and use it in our theorems!"
+
+\section{Millenium Problem Answer For Quantum Yang-Mills}
+
+The answer is that non-commutative lie groups $G$ has nothing whatsoever to do with any 'mass gap' in Euclidean spaces.  This is mathematically not happening.  The universe has mass gaps for a totally different reason, and that is absolute space is a four-sphere of radius $R=3075.69$ Mpc.  And it is the {\em compactness of the actual universe} that is responsible for quantisation and mass gap and such things.  Expect a thorough counterexample to the Quantum Yang-Mills type hypotheses in Mathematics.  Not happening.  Not happening this year, the next year or in a million years because the mathematical hypothesis is surely false.
+
+\section{Zulf Attempts To Stop Getting Distracted From The Problem}
+
+It's true, my bad habits on aversion to certain analysis problems is so deep that I have to try to keep my attention from drifting away.  Right, so we are interested in proving a limit of these $a_j = \ell(f_j)$ that are independent of the $f_j$ and $O_j$.
+
+The first idea that occurs to me is to bandage the problem and assume {\em monotonicity of the functions}. 
+
+A monotonicity could really help here.  Wouldn't it be nice if there were some sort of monotonicity here like
+\[
+a_{j+3} \le a_{j+2} \le a_{j+1} \le a_j 
+\]
+Assuming we found some sort of monotonicity, we could look for an elementary theorem that bounded monotone infinite sequences on $\mathbf{R}$ have limits.  
+
+There is most likely a much more subtle analytic way, but let us assume pure monotonicity of $f_j$.  Let's assume
+\[
+f_j - f_{j+1} \ge 0
+\]
+Note that this is not part of our hypotheses.  We're introducing it as appendage to do less work.
+ 
+
+If we assume
+\[
+f_{j+1} \le f_j
+\]
+for all $j$ then we can apply the theorem that bounded monotonic sequence has a limit and the limit is the infimum \cite{MR}.
+
+
+We're going to cheat egregiously and invoke the monotone limit theorem for decreasing real numbers \cite{MR}.  Then we are done, since $a_j$ are decreasing non-negative numbers, they are a bounded sequence of real numbers and the infimum is the limit.
+
+\section{Zulf Is Very Pleased With My Duct Taping}
+
+One of the things I really hate about analysis, always did, is enormous amount of labour without any mathematical insights at all.  I always hated that.  I am pleased and satisfied with my duct-taping of the problem here because the monotone limit theorem for bounded real numbers is quite elementary and sharp; it's Princeton {\em freshman} year result, and it is well-understood.  No one in mathematics will think there can be any rigour-hole in it.  So the monotone assumption directly connects essentially geometric-topological constructions with an extremely elementary theorem for real sequences.  That's the insight here, that one can rigorously prove something connecting hand-wave prone constructions such as these functions $f_j$ with fairly hard elementary results.  Beyond that, the surgery of the functions is exhaustive work without insights that have mathematical value in my opinion.  So I will leave this as a good solution.
+
+
+\begin{thebibliography}{CCCC}
+\bibitem{MR}{\url{https://en.wikipedia.org/wiki/Monotone_convergence_theorem#Convergence_of_a_monotone_sequence_of_real_numbers}}
+\end{thebibliography}
+
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass{amsart}
+\usepackage{graphicx}
+\graphicspath{{./}}
+\usepackage{hyperref}
+\usepackage{csvsimple}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{epigraph}
+\title{Stanford Spring 2012 Analysis Problem I.3}
+\author{Zulfikar Moinuddin Ahmed}
+\date{\today}
+\begin{document}
+\maketitle
+
+\section{Stanford Spring 2012 Analysis Problem I.3}
+
+We have a normed vector space $(X, \|\cdot\|_X)$, and two subspaces with other norms specific to them with identity map being continuous.  $M, N\subset X$ and $(M,\|\cdot\|_M) \rightarrow (M, \| \cdot \|_X)$ and $(N,\|\cdot\|_N) \rightarrow (N, \| \cdot \|_X)$  are continuous.  Neither of $M,N$ are necessarily closed.
+
+Define
+\[
+\|x\|_{M+N} = \inf\{ \|m\|_M + \|n\|_N: x=m+n\}
+\]
+
+(a) Show $\|\cdot\|_{M+N}$ is a norm.
+
+(b) Show that if $M$ and $N$ are complete, so is $(M+N,\|\cdot\|_{M+N})$.
+
+For the scaling property of norm,
+\[
+\|c x\|_{M+N} = \inf \{\| m \|_M + \| n\|_N: cx = m+n \}
+\]
+Rewrite the inf over $\| c m' \|_M + \| c n' \|_N$ with $cx=cm' + cn'$.  Now pull out the $|c|$ from inside the inf and get scaling $\| cx \|_{M+N} = |c| \| x \|_{M+N}$.
+
+For triangle inequality,
+\[
+\| x + y \|_{M+N} =\inf\{ \|m\|_M + \|n\|_N: x+y = m +n \}
+\]
+Consider arbitrary $m,n$ satisfying $x+y=m+n$.
+Since $x,y \in M+N$, there exists $m',n'$ so $x=m'+n'$ and define $m''=m-m'$ and $n''=n-n'$.  
+
+Now $\| m' + m'' \|_M \le \| m' \|_M + \|m''\|_M$ and $\| n' + n'' \|_N \le \|n' \|_N + \| n'' \|_N$.
+
+This gives us
+\[
+\| x + y \|_{M+N} \le \| m' \|_M + \|m''\|_M + \| n' \|_M + \| n'' \|_N.
+\]
+and we have $x=m'+m''$ and $y=n'+n''$.  Take two infima on the right side to get the triangle inequality.
+
+For $\|x\|_{M+N}=0$ iff $x=0$, note this holds for $\| m\|_M=0$ iff $m=0$ and $\|n\|_N=0$ iff $n=0$.  Since $0 \in M, N$ and there is an inf over things on the right, it follows.
+
+
+\section{Completeness}
+
+Suppose $x_k$ is a Cauchy sequence in $M+N$.  For $\epsilon>0$ and $p,q \ge K$ we'll have
+\[
+\| x_p - x_q \|_{M} < \epsilon.
+\]
+Let $m_k,n_k$ be {\em arbitrary} elements of $M,N$ with $x_k = m_k + n_k$.
+So $x_k$ has the property
+\[
+\| x_p - x_q\|_{M+N} \le \|m_p - m_q\|_M + |\|n_p - n_q\|_N
+\]
+
+So we need to just not take arbitrary elements, but choose $m_k,n_k$ to be such that $\|m_p-m_q\|_M < \epsilon$ and $\|n_p-n_q\|_N <\epsilon$.  Then we'll get convergence for $m_k,n_k$ hence $x_k$.
+
+
+
+
+
+\end{document}

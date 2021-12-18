@@ -1,0 +1,57 @@
+\documentclass{amsart}
+\usepackage{graphicx}
+\graphicspath{{./}}
+%\PassOptionsToPackage{hyphens}{url}
+\usepackage{hyperref}
+%\usepackage{url}
+\usepackage{csvsimple}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{epigraph}
+\title{Zulf's Stanford Analysis 2012 Qual Problem II.2}
+\author{Zulfikar Moinuddin Ahmed}
+\date{\today}
+\begin{document}
+\maketitle
+
+\section{Stanford Spring Analysis 2012 Problem II.2}
+
+Suppose $p \in (0,1)$ and $0 < a < p$.  Let $A_k \subset [0,1]$ for $1\le k \le N$ be Legesgue measureable and 
+\[
+\frac{1}{N}\sum_{k=1}^N \mu(A_k) \ge p.
+\]
+For $a >0$ let 
+\[
+E_a = \{ x \in [0,1]: x\in A_k \mathrm{ for } aN \mathrm{ values of } k \}
+\]
+
+(a)  Show 
+\[
+\mu(E) \ge \frac{p-a}{1-a}
+\]
+
+(b) Show if $c > (p-a)/(1-a)$ there exists $A_k$ with $\mu(A_k)\ge p$ and $\mu(E_a) < c$.
+
+\section{Thoughts}
+
+These set theoretic problems are quite subtle and difficult for me.  And since I have no need to prove to anyone how clever I am, I will just think about this problem remarkably slowly.
+
+Let's start with the case with $N=1$.  We have just one $A_1$.  We have $\mu(A_1)\ge p$.  Hold on.  Let's fix $A_1 = [0,1/4]$.  Now we take $p= 1/4-1/16$.  We made it to
+\[
+\mu(A_c) = 1/4 \ge p
+\]
+Let $a=1/8$.  What is $E_a$?  It's the set of $x \in [0,1]$ that is contained in at least $[1/8] =0$ values of 1.  
+
+That's a relief.  In this case $\mu(E_a)=1$.  Great.  This means for $N=1$ we will get $\mu(E_a)=1$ and that's bigger than $(p-a)/(1-a)$ since this will be less than 1.
+
+That's good.  That's very good because it looks like $N=1$ case is not going to cause problems for (a).
+
+My thought is that mathematical induction is the way to go here, that's my thought.  This is a highly subtle problem I have never seen before, and so I will move hesitantly and trepidation.  These sorts of problems are generally the ones I thank Andrei Kolmogorov and some of these Russian great mathematicians for having blessed us with.  
+
+You have to understand, my dear readers, that some of these Russian mathematicians when they are not drinking Wodka and doing their lovemaking with their Babushkas are doing fantastic things in mathematics that {\em I don't have to do}.  But alas this problem I will have to attempt.
+
+
+
+
+
+\end{document}

@@ -1,0 +1,270 @@
+\documentclass{amsart}
+\usepackage{graphicx}
+\graphicspath{{./}}
+\usepackage{hyperref}
+\usepackage{csvsimple}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{epigraph}
+\title{Stanford Spring 2012 Analysis Problem II.2}
+\author{Zulfikar Moinuddin Ahmed}
+\date{\today}
+\begin{document}
+\maketitle
+
+\section{Context}
+
+December 17 2021.  There are ten problems in Stanford Spring 2012 exam.  I have some idea of how to do nine of them already, with variable amounts of rigour.  This particular problem I do not yet know how to do.  I think it is fair to say that with reasonable ability to solve nine problems out of ten would get me past the Ph.D. qualification exams at Stanford Mathematics, so I am pleased.
+
+With this problem, I do feel that actual effort will be required.  I freely admit, this is the sort of problem where I need more understanding, these set theoretic problems.  They have a Putnam-Putnam feel to them and even at 49 I am not as comfortable with these.  The trouble might be that I never really {\em enjoyed} these sorts of problems because they involve having intuition about things that I avoided naturally as a student in high school and at Princeton too.
+
+\section{Motivation: History of Analysis}
+
+I had started to enjoy learning some elementary things again, and Barry Simon is fascinating in his textbooks for his specific attention to biographical details of past mathematicians.  
+
+Years ago, when I was still young and foolish, I was mesmerised by the story of Bernhard Riemann and Karl Weierstrass in Peter Sarnak's functional analysis course.    It might have been that I used my reverence for Bernhard Riemann unconsciously as an excuse to turn away from all things too set-theoretic in analysis.  Let me show you something.
+
+\includegraphics[scale=0.4]{riemann.jpg}
+
+That's right.  My reverence for Riemann is so high that I examine his papers.  I have a lot of books, so this is not as exceptional as you might think.
+
+One interesting thing is just to take a look at the period for the major figures in early analysis.  Karl Weierstrass lived between 1815 and 1897.  Georg Cantor between 1845 and 1918.  Barry Simon considers the most intractable problem of nineteenth century analysis the proper notion of the integral for discontinuous functions.  I am just fascinated by the issue that none of these concepts existed at all three of four centuries ago.  We say "Ah, we'll just take the Lebesgue measure on compact interval $[0,1]$, and we'll define all sorts of subsets $A \subset [0,1]$ by various deranged set theoretic criteria, and we'll just calculate the Lebesgue measure of $A$, and then we will then claim that that's the amount of poison you need to pour into Bill Gates' food to ensure that he is quite dead."  It is quite astounding to me.  It really is.  How much of all this is canonical, and how much is delusional?
+
+No, this is a genuine serious issue for me.  I studied at Princeton, so I am familiar with some of the rationale that people have found for the concepts, but there is a significant question about whether they are the right concepts to tell us all about existence in which we live. I mean, they could be just a fad, where I just spent a lot of time studying some interesting fad for three centuries, deluding myself that I can use the Haar measure on Four-Sphere thinking that I am telling humanity about the actual universe, and find that it was not right and some bloke in five or six centuries will write about Zulf.  "Well, Zulf, well-meaning bloke, but he used homogeneous theory for four-spheres in theoretical physics, which we found in the past four centuries to be radically primitive and we abandoned these and generally send in our anti-terrorism squad to find the remaining ones.  Here, in the twenty eighth century, we do not permit homogenous spaces and Haar measures."  
+
+You're laughing.  You think this is eternal truth.  There's the rub.  One has to have respect for nature, and attempt to have sense for it.
+
+\section{Canonical Formulation Sometimes Occurs Like A Stochastic Phenomena}
+
+I am obviously paranoid about my own immortal genius being remembered.  I worked for a decade, without any financial or organisational support at all, on disability, in Allen Texas, on some things but my Four-Sphere Theory is a major achievement in the history of human knowledge of nature far exceeding the understanding of Albert Einstein and Erwin Schroedinger.  More than three years have passed and I have not even recieved a simple letter of congratulations from the scientific community, and instead I have Bill Gates continuing in his racial murder plan with support of my own government.  That is the reality; Bill Gates, I know, wants me to gain no credit for my own great works, and is confident that he can sabotage tenure considerations everywhere as he had succeeded at Harvard.  And Harvard did not take any measures to accomodate me either.
+
+The point is not seeking some pity and sympathy from my dear readers, but instead to point out that this is reality for me from experience, and so I have to be rational and consider that despite what the history books tell us, it might have been always the case.
+
+In my case I have produced such an astounding advance in physics that the {\em knowledge} of my immortal genius work might become spread but Bill Gates might succeed and various other people might take credit for the advance.  He wants only white people to take credit for great achievements.
+
+Now you could say, "Well, that's absurd.  The honour code of academic institutions would not allow that."  That I do not know with certainty.   Time will tell.  The universe works the way it does and not the way we like to conceptualise it.  I do not have enough certain knowledge to be sure whether I will be {\em acknowledged by others} for my immortal genius.  I do know that I am {\em in fact an immortal genius by my own assessments}.  This is a subtle issue that I had to resolve for myself, out of necessity, and I am pleased with the assessment.  It is right.
+
+\section{Return To Extremely Elementary Matters}
+
+I am going to go through a stroll back to my early education in Mathematics, 1987-1995.  It is not just an elaborate ruse to not do the problem of this note.  It is the point of the whole exercise of going through the Stanford Spring 2012 Analysis Qualification problems, to have some sense for what all that was all about.  In the Ross Program at Ohio State University, I was already quite aware that {\em real numbers} are defined as the completion of the rational numbers, that they are {\em uncountably infinite}.  To me it is most amazing that the geometry of all of existence is a {\em Four-Sphere of fixed radius $R=3075.69$ Mpc}. The same thing happens for the four-sphere.  There are uncountably infinite points.  The absolute space of existence, having nothing whatever to do with analytic completion of $\mathbf{Q}$ being $\mathbf{R}$, is, I claim, absolutely exactly correctly modeled by $S^4(R)$, time being separate from space.  
+
+You see, that is where all the elementary fundamental issues of real analysis begins to be a bit strange. The mathematical description of the four-sphere, so long as we are talking about something that is a product of Man's Imagination, is more than satisfactory.  But that's not enough for me.  I am deeply interested in whether the mathematical description is satisfactory as the shape of the entire existence. And that is when uncountably infinite points arranged in the particular geometry begins to be profoundly disturbing.  
+
+It is precisely these sorts of things that lead me to give up my aversion to set theoretic issues in mathematical analysis and attempt to understand them again.
+
+It is one thing to say, "Well, four-sphere theory is an interesting theory with certain features that then predict some phenomena correctly and so we find it to be an adequate theoretical physics theory."  That part is not in doubt. What is more interesting is the claim:  All of existence that we have ever experienced in the past eight million years of human evolution, all of it has the four-sphere geometry, and Zulf, the immortal genius will tell you the radius of all of existence, and it is approximately $R=3075.69$ Mpc.  Good.  Now you, human race, have the knowledge that you never had in the past eight million years, and I, Zulf, am gifting you this knowledge."
+You see, that is fair.  But I still don't understand how to fully grasp the idea that the mathematical description is exact.
+
+\section{I Claim Full Explanatory Power Of Four-Sphere Theory Including Bill Gates Black Magic}
+
+Theoretical physics had constrained itself to a three-dimensional empiricism for a long time, but Four-Sphere Theory, I claim makes possible {\em scientific explanation of esoteric phenomena} such as Bill Gates use of harmful black magic to harm my health.  The theory is that all things of the Four-Sphere Theory are real, and that black magic and meta consist of {\em manipulation of spinor field constructions} that are not exactly neutral atoms of the physical world.
+
+Recall that in the Four-Sphere theory, the physical universe is an evolving hypersurface $M(t)\rightarrow S^4(R)$ in time $t \in \mathbf{R}$.  Time does not deform.  Absolute space is $S^4(R)$.  But the physical universe always evolves staying embedded in the four-sphere.  Bill Gates use of black magic manipulates some {\em objectively real} spinor field constructions which then allow him to harm me even though his physical body is apparently geographically distant from mine.  It's not a full explanation obviously, but it's right.
+
+In fact, I claim that Four-Sphere Theory is, for macroscopic universe, the only correct scientific theory of macroscopic physics, and there will in the infinite time future no other theory that will displace it because it's how nature is.
+
+Quantum field theory is not the right scientific theory of macroscopic physics but Four-Sphere Theory is; spinor fields on $S^4(R)$ are the fundamental objects of physics and not quantum fields.
+
+  
+
+\section{A Profound Issue Lost For A Century}
+
+The issue is the question of {\em ability of pure mathematics} to actually tell us something about the external world {\em exactly}.  This issue had been lost and irrelevant for 120 years, because Einstein and the Quantum Theorists had gone off into a mode of thought that physicists concerned about the structure of nature do not have to care at all about a sort of {\em pedestrian concern} from their point of view about mathematical sense.  Now I was learning about physics from 1987-1991, and during my high school years I was quite impressed by Richard Feynman.  His public lectures made clear that physicists thought their exploration of actual nature was such that they were amused by the ways of mathematicians.  Feynman's lectures make this viewpoint clear.
+
+When I was an undergraduate at Princeton, 1991-1995, I was not impressed by use of path integrals by physicists.  I tried a bit to learn.  But I was rather not very keen on use of translation-invariant measures on infinite dimensional spaces.  I though it was rubbish.  My Four-Sphere Theory avoids those issues altogether and can handle far more rigorous accounts of {\em phenomena} addressed by Quantum Electrodynamics and is still mathematically quite solid.  Now my intention was better scientific theory, and not pedantic concern for mathematical rigour.
+
+But since Four-Sphere Theory {\em succeeded} we can return to the question of whether pure mathematical work sheds light into the nature of external world.
+
+The question is not new but old; I have successfully {\em challenged} the relativity-quantum field theory paradigm in all scales down to $\delta=10^{-13}$ centimeters with a mathematically coherent theory, and so I believe the question lives again like Lazarus arisen from his death.
+
+\section{Enter Leopold Kronecker}
+
+Leopold Kronecker (1823-1891) was in this period of mathematics that I and many of the young people I associated with from youth held in a particular hallowed and venerated light.  At least for mathematics, these were revered figures for the cognoscenti.  I don't think it occurred to me ever to ask seriously in 1987-1988 whether it was the right thing to do, to revere particular people, mathematicians.  I don't remember asking others.  Jeff Wall is at NSA, and Brian and Keith Conrad have been involved in mathematical development for years.  Of course later on I did have to deal with people who never even heard of Leopold Kronecker without any deep disdain at their miserable lack of cultivation.  I could not afford that any more, unprotected from the world of philistines who revere all manner of shady politicians whose importance is doubtful but do not know the great Arnold Sommerfeld.  I'd have to settle for, "Well, at least if they know Charles Baudelaire's obsession with degenerate morals, that's better than nothing."
+
+Leopold Kronecker worked on elliptic functions and algebraic number theory.  He was Jewish till conversion to Christianity in 1890.  I bring him up for this. 
+
+"The topics he studied were restricted by the fact that he believed in the reduction of all mathematics to arguments involving only the integers and a finite number of steps. Kronecker is well known for his remark:-
+God created the integers, all else is the work of man."
+
+You see, this is an austere restriction that has its own beauty, and I am most grateful for the opportunity to examine this issue still.  
+
+Now let me remind my dear readers that I am strongly faithful to religious views that differ from Judaism, Christianity and Islam.  I believe that God, the force that moves all things of existence is eternally silent and inscrutible.  Kronecker's view of God having created the integers and everything else being the work of man is actually a serious problem for me, and I will wish to elaborate, over time, why it is such a profound and important problem.  Some of the ideas are already clear, but the question is deep and important and not frivolous.
+
+\section{Digression I Never Liked "The Jewish Question"}
+
+In America, people believe that Muslims are anti-Semitic.  This is not true. I myself am not Muslim, but I know that Muslims are not anti-Semitic.  This is the problem with America. In America people believe in all manner of superstitious things about other people and feel enlightened with their beliefs without any experience with the people.  I was Atheist from 1979, so I was never actually Muslim as an adult.  And I was in mathematical circles with many Jewish people.  So I had never developed any anti-Semitic feelings from youth.  
+
+I never liked "The Jewish Question" that I learned about from old war movies.  I have decided to correct it to "The American Whites in Government and Bill Gates Question".  Now this is the right question as these people pose a grave threat to the human race and have been implicated as the inheritors of the Native American Genocide.  Here there is a {\em question} that is serious, and that question is whether we ought to gas them in Auschwitz.
+
+\section{Zulf's World's Bad People Conjecture}
+
+We define $H$ as the total human race with roughly $|H| = O(10^{10})$.  We define $H_{bad} \subset H$  as the abstract set of human beings with the property that $H-H_{bad}$ is guaranteed to have all metrics of well-being improve, not Utopia but significant improvement of well-being and life satisfaction by all measurable metrics.
+
+My non-trivial conjectures are:
+\begin{itemize}
+\item{ Bill Gates and White People in American Government belong to $H_{bad}$ with Bill Gates being the worst rotten scumbag evil degenerate disgusting vile man the world has ever known and the white people in American government are mostly minions of his with minor improvement over him}
+\item{ Let $H_{bgw}$ denote the White People in American Government and Bill Gates.  The most nontrivial conjecture I have is that $|H_{bad}| \le 10 |H_{bgw}|$. }
+\end{itemize}
+
+These conjectures are not yet proven at the moment but I am extremely confident that in the next forty of fifty years we will be able to establish these with certainty or modify them a bit and prove them.
+
+I like this sort of measure-theoretic considerations in the moral quality of human beings.  I would like some rigorous effort on these fronts.  
+
+\section{The Problem With The Political Viewpoint}
+
+It has been a mainstay in political propaganda that some people will claim that, some set $H_{random} \subset H$ are such that human race is better off without them and promote that they ought to be wiped out.
+
+
+I don't like this at all.  This is primitive, and wrong.  What is right is not random propaganda that might be all lies and deception about $H_{random}$ but much more rigorous metrics and measures that prove without a shadow of a doubt that the propoosition that $H_{random}$ being eliminated will definitely lead to $H-H_{random}$ having a much better existence in life satisfaction, in well-being and peace, in health, and many other metrics.
+
+In other words, I am not impressed with some of this primitive tribal propaganda, that was already quite popular during the time of Deuteronomy, of various commandments to wipe out every man, woman, and child of such and such a tribe that we don't like.  That will not do at all.
+
+Instead, we ought to have extensive evaluations, measurements, and {\em prove} that indeed it is the case that $H-H_{random}$ would be better off wiping out $H_{random}$.  This has not happened in the human race in the recent centuries and we have to change that.
+
+\section{Tribal Genocide Morality Of Deuteronomy}
+
+You see, Deuteronomy is the inheritance of not only Jewish people but Christians and Muslims as well.  Altogether some half the world's population is influenced by Deuteronomy.  But savage tribal genocide ideas also occur in Homer's {\em Iliad}.  
+
+Let me put things in context for those who do not know. I will not claim expertise on these matters but I know a bit, from general education and personal interest.
+
+Deuteronomy is from around 7-8th century BC.  Usually considered to have been written down circa the 8th century BC, is among the oldest extant works of Western literature.  In the Iliad you have conversations between Agamemnon and Menelaos about how every man, woman, and child ought to be slaughtered in Troy.
+
+I don't want to be specific about where this sort of thing arises from.  I don't know the origins of this tendency to genocide at tribal levels and anthropologists do not give a clear answer.  It is in fact, this same primitive impulse that drives Bill Gates to racial murderous convictions.  
+
+Now I was fortunate to have moved to United States and habituated to modern cosmopolitan urban values surrounded by bright people with far more advanced moral values than Bill Gates.  But these are important things for human race to understand and handle, for today the world has eight billion people.  They are also my beloved people, so I don't want any of this older sorts of tribal genocide marring the future of my people.
+ 
+\section{Anders Breivik, Brenton Harrison Tarrant, and Bill Gates are all Extremist Racial Terrorists}
+ 
+Many of my dear readers may not be familiar with white racial terrorism incidents.  I will not go into the sordid details but give you some references. Anders Breivik is from Norway, and in 2011 he killed 77 people by various methods.  He was racially motivated.  In 2019 Brenton Harrison Tarrant killed 51 and injured 40 using other methods.  Bill Gates belong to these racial murderers.  They are racial not by {\em target} but by {\em self-identity}.  To them what matters is not the particular ethnic or cultural identity of their victims, but that they are not their own race in their minds.  Bill Gates belongs exactly in the same class of tribal murderers.  He is even more zealous than Breivik and Tarrant but his {\em methods} are more esoteric.  He prefers direct power methods.
+
+\section{Zulf Compares My Hard-coreness to American Right}
+
+In order to appreciate my hard-coreness versus American right, you have to understand a bit about the {\em sigmoid function}
+
+\includegraphics[scale=0.3]{sigmoid.png}
+
+That's a sigmoid function. American right Hard-coreness, from my viewpoint is a constant function.  They say "We are hard-core and we bomb and bomb and kill and kill when a condition $X$ is met".  
+
+You put people in some scale in the horizontal axis.  They will say, "These liberals are floofy and want to save the murderers but they don't respect middle class American white people".  So I am sigmoid to them.  On the left side, I am rather lenient to even ordinary murderers.  I say, "we should give them a second chance in life, etc." in many cases.  But then you go in this scale towards evil like Bill Gates. They are not as hard-core as me. I will say within moments of the birth of this Demon, he should have been assaulted with lots of extremely lethal war equipment and his blood ought to have painted the walls like Jackson Pollock's {\em The Red Composition}.  They will say, "That's too extreme, that's not right.  That's too horrible."  But I don't care.  You see, for me it's deep in the heart of the being being considered.  Bill Gates does deserve the horrible massacre from moments after birth.  It's not his ethnicity.  It's his pure Evil.  Other people, like random people with beards in West Asia proclaiming that Allah is great or whatever, I don't care.  They're probably alright.  I don't even go there to travel.
+
+Fine, I am an Archangel of Heaven, and notice how I {\em avoid all responsibility} for all sorts of damage to random people by {\em not specifying} what the criteria is for the horizontal axis but assuring you that Bill Gates belongs to the right side?  That's intentional.  I don't like getting caught with a vulnerability and to public assaults by being sloppy in my fine tuned political attacks.  That would be quite shameful for me. I'd rather keep the criteria quite {\em nebulous} and give a general hand-wavy feel to people and keep them ignorant of what {\em specifically} they might be.  Doing anything else would be quite irresponsible.
+
+
+ 
+\section{Reminisces From Princeton}
+
+I have so many great memories and sad ones too from Princeton days that I am just old enough to share them.  I was very good at topology and geometry.  It was not easy, though.  I took Algebraic Toplogy with William Browder sophomore year.  We studied from a small text of Greenberg and Harper.  It was so difficult for me at first I went to Ms. Lindenstrauss, the teaching assistant with hopes for some miracle.  I did well in the course. Gradually I was very good at algebraic topology.  You see, I was young and thought things would be easy for me, like many bright youngsters.  They were not easy.  But I had studied Raoul Bott and Loring Tu's {\em Differential Forms In Algebraic Topology} in high school, and was mesmerised by it.  I became pretty good at chasing exact sequences, and proving something about the cohomology ring of various manifolds.  I began using the $\pi_1$ functor.
+
+One day I am sitting in Fine Hall common room.  Jeff McNeal comes in sees me and makes a bee line.  He looks at the scribbling on my notebook in front of me and says, "Let me give you a real problem.  These soft methods are damaging to your education."  And that is how I had a thesis problem.  Jeff McNeal could not stand the functorial soft methods.  He gave me Bers, Schechter, John's book on Partial Differential Equations and I worked very hard to do my thesis mostly by my own efforts.  
+
+You see, these set theoretic combinatorial problems literally gave me the heebie-jeebies.  I did not show this to the analysts at Princeton, for fear that I will need them to give me results to be great one day.  My great hero was Michael Atiyah, and then Simon Donaldson and Edward Witten in those days.  I was quite pleased when I read Milnor's {\em Morse Theory} and {\em Characteristic Classes}.  I felt that I was learning deep and important things about the mathematical world.  You let analysts handle little technical results and always praise them profusely, and then you worked on great problems, I thought, the sort that transform the world like Atiyah-Singer Index Theorem.  You didn't do set theoretic manipulations that are really for clever people of Olympiads and Putnam,  not really great mathematicians who work on topological invariants, and give some kind words to the analysts who prove all manner of neat things that you can use without doing it yourself.
+
+
+
+
+
+\section{Stanford Analysis Qual Spring 2012 II.2}
+
+Suppose $0<p<1$ and $0<a<p$.  Suppose $N\in \mathbf{N}$ and $A_1,\dots, A_N$ are Lebesgue measurable.  Suppose
+\[
+\frac{1}{N} \sum_{k=1}^N \mu(A_k) \ge p
+\]
+Let
+\[
+E = \{ x \in [0,1]: x \in A_k \mathrm{  for at least } [aN] \mathrm{ values of }A_k \}
+\]
+
+(a) Show
+\[
+\mu(E) \ge (1-p)/(1-a)
+\]
+
+(b) Show that if $c > (1-p)/(1-a)$ there exists $N$ and $A_1, \dots, A_N$ so that $\mu(E) < c$.
+
+\section{Simplified Problem}
+
+I have very little feel for these problems.  So I will just examine a much simpler situation.  I will fix $N=4$ and not worry at all about the original problem for the moment. Then I will let $a_s = s/N = s/4$ for $s=1,2,3,4$.  This simplified problem translates to a purely combinatorial situation.
+
+Yes, I understand that the problem is for a much more general situation, but I don't understand it so sue me.
+
+Let me fix $p=3/5$.  Let's see.  That gives me $a_1<p$ and $a_2<p$.  That's good enough.
+
+Let us label some $E$ sets.  We denote by $E_1$ the $E$ set corresponding to $a_1$ and $E_2$ that corresponding to $a_2$.  
+
+So what is $E_1$?  It's the set
+\[
+E_1 = A_1 \cup \cdots \cup A_4
+\]
+That's the first step to my understanding.  
+
+And what is $E_2$?  This is the following:
+\[
+E_2 = \bigcup_{1\le j<k \le 4} A_j \cap A_k
+\]
+And our goal is to prove (a) for these alone and something about (b) too.  In other words we want to prove
+\[
+\mu(E_1) \ge (3/5-1/4)/(1-1/4)
+\]
+and
+\[
+\mu(E_2) \ge (3/5-1/2)/(1-1/2)
+\]
+Great.  Now Zulf is pleased.  Zulf considers this problem to be quite a bit out of my range of intuition at the moment.  Even the simplification looks not so easy to me.  But it looks approachable.   
+
+Note that Zulf is not feeling horrible and low and unworthy at the moment.  Zulf does not pin his self-esteem on mathematics problems.  Zulf is wise enough not to do self-destructive things like that.
+
+Take $A_1=\cdot=A_4$ and all of them have $\mu(A_k)=3/5$ and we have
+\[
+\mu(E_1)= 3/5=0.6
+\]
+But we have $(p-a)/(1-a) = 0.46$.  That's a relief.  The result is true here. What about $E_2$?  Let's see.  $\mu(A_j\cap A_k) \ge 2\times 3/5-1 = 0.2$.  And $(p-a)/(1-a)= 0.2$.
+
+I see, this is probably the key, that we prove that for the at least one case we always have $p \ge (p-1/N)/(1-1/N)$ and then for the others we just look at measures of k sets fitting into the $[0,1]$ interval.
+
+I can see some way out of this labyrinth.  We consider the case of general $N$, and define $E_k$ for $x\in A_j$ for at least $k$ of values of $j$.  Then
+\[
+E_k = (\bigcup_{(s_1,\cdots,s_k)} A_{s_1} \cap \cdots \cap A_{s_k}) \cup ( \bigcup_{(s_1,\cdots,s_{k+1})} A_{s_1} \cap \cdots \cap A_{s_{k+1}} ) \cup \cdots
+\]
+Then get rid of the higher order terms and take a maximum over the $k$ terms:
+\[
+\mu(E_k) \ge \max_{(s_1,\dots,s_k)} \mu(A_{s_1} \cap \cdots \cap A_{s_k})
+\]
+This is not hard to prove.  And now the problem is tractable for (a) if this is sufficient.  We have reduced the problem to proving
+\[
+\max_{(s_1,\dots,s_k)} \mu(A_{s_1} \cap \cdots \cap A_{s_k}) \ge (p-a)/(1-a)
+\]
+Is this true? I don't know yet.
+
+Well, let me continue.  This approach will not yield as good results as we would want, as this will yield something only for $p>1/2$ for when $p<1/2$ intersections $A_j \cap A_k$ could all be empty.  Regardless, my way of doing things is that it is better to get some result than no result, so let's see what we can do.
+
+Let us add arbitrarily the condition $p\in (1/2,1)$ then.  Obtaining a lower bound for 
+\[
+B_k = \max_{(s_1,\dots,s_k)} \mu( A_{s_1} \cap \cdots \cap A_{s_k})
+\]
+does not seem so easy either.  Let's add independence of $A_j$ then we would get
+\[
+B_k \ge p^k
+\]
+Not exactly the sort of valuable result in the problem we want to solve, but it's something with some lower bound.  
+
+Without independence of $A_j$ I do not have any simple understanding of these intersection probabilities at all.  I am just surprised at the results of the problem without any probabilistic assumptions.  That's my answer for December 18 2021.
+
+
+
+
+
+\section{Commentary}
+
+Well, I am 49, so when I cannot see the path to a problem, I am rather likely to chat about all manner of things.  That's my way of doing things. I make no apologies for it.
+
+
+
+
+
+
+\begin{thebibliography}{CCCC}
+\bibitem{Kr}{\url{https://mathshistory.st-andrews.ac.uk/Biographies/Kronecker/}}
+\bibitem{NZ}{\url{https://en.wikipedia.org/wiki/Christchurch_mosque_shootings}}
+\bibitem{AB}{\url{https://en.wikipedia.org/wiki/Anders_Behring_Breivik}}
+\end{thebibliography}
+\end{document}

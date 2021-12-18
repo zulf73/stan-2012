@@ -1,0 +1,166 @@
+\documentclass{amsart}
+\usepackage{graphicx}
+\graphicspath{{./}}
+\usepackage{hyperref}
+\usepackage{csvsimple}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{epigraph}
+\title{Zulf Ruminates On How I Managed To Irritate Daniel Stroock At MIT When I Was Younger}
+\author{Zulfikar Moinuddin Ahmed}
+\date{\today}
+\begin{document}
+\maketitle
+
+Years ago, around 1999-2000 I was working with Daniel Stroock at MIT.  I was youthful and not particularly interested in how other people thought about Mathematics.  My training at Princeton was good, but my attitude was that of a geometer or topologist.  I had done well in my Analysis courses, but I spent so much time with Peter Oszvath and Shinichi Mochizuki and others who had interest in geometry and topology and number theory I was not particularly respectful of the fine tuned mathematical skills in Analysis at all. It was not that I was badly educated, but I had just done lots of problems in Analysis and did not think much of the issues.  You apply some inequalities, you do some limiting operations.  They never captured my imagination.  Daniel Stroock was the wrong man for this sort of attitude, and quite busy too.  In the end I irritated him quite a bit.  
+
+Let's see, how long has it been now?  Today is December 2021.  It's been 22 years now.  I am looking at the Spring 2012 Analysis Ph.D. qualifying exam today.  I am a bit rusty and so I will just work on the first problem.  I won't try to be efficient.  I am 49 years old now, and I indulge my particular ways of thinking about things and don't worry about how young students do things any more. 
+
+\section{Problem (Analysis Spring 2012, Problem 1)}
+
+Let $\mu$ denote the Lebesgue measure on $[0,1]$.  Suppose $f_k$ are real-valued Lebesgue-measurable functions on $[0,1]$.  
+Let
+\[
+m_{kn} = \{ x \in [0,1]: |f_k(x)| \in (2^{n-1},2^n) \}
+\]
+for $n \in \mathbf{N}$.
+
+\subsection{Problem 1a}
+
+Suppose
+\[
+\sum_{n=1}^\infty n 2^n m_{kn} \le 1
+\]
+for all $1 \le k \le \infty$.
+Show that if $f_k \rightarrow 0$ pointwise then $\int f_k \rightarrow 0$.
+
+\subsection{Problem 1b}
+Give an example of $f_k$ such that 
+\[
+\sum_{n=1}^\infty 2^n m_{kn} \le 1
+\]
+and $f_k \rightarrow 0$ but $\int f_k$ does not tend to zero
+
+\section{The Use Of Lebesgue's Dominated Convergence Theorem}
+
+I will concentrate on Problem 1a, since there is something subtle and interesting in that Problem.  For Problem 1b, I will just consider something like this.
+
+Let $I_n$ be the intervals $(2^{-n-1},2^{-n})$.  I will consider functions $f_k$ that will be constant on these $I_n$ and fidget around till I get something with $f_k\rightarrow 0$ pointwise and get the integrals to have positive value.  I will come back to this later.
+
+I want to return to the assumptions of Problem 1a and immediately apply dominated convergence theorem on two functions.
+
+Now since $f_k\rightarrow 0$ almost everywhere, we will have for sufficiently large $k\ge k_0$, the almost everywhere bounds:
+\[
+| f_k | \le 1
+\]
+and
+\[
+| f_k |^2 \le 1
+\]
+The Lebesgue's dominated convergence theorem applies and guarantees that for $k\ge k_0$, we have
+\[
+\int |f_k| \le 1
+\]
+and
+\[
+\int |f_k|^2 \le 1
+\]
+
+These inequalities are fundamental starting point for me.  Now I will proceed to carefully examine the Cauchy-Schwarz inequality because this is where the problem shows its subtlety.
+
+After a large amount of fidgeting for several hours, I like this central path.  I consider an arbitrary $p <\infty$ to break up an infinite sum and handle the two parts separately, a beautiful and powerful idea that I actually learned from Elias Stein's classes and works.
+
+\[
+\sum_{n=1}^\infty {n^{-1}} 2^n m_{kn} = \sum_{n=1}^p {n^{-1}} 2^n m_{kn} + 
+\sum_{n=p+1}^\infty {n^{-1}} 2^n m_{kn}
+\]
+
+The first summand above I bound by
+\[
+\frac{1}{p} \sum 2^n m_{kn} \le \frac{1}{p}.
+\]
+
+The second summand I bound by the Cauchy-Schwarz inequality in a careful manner.
+
+\begin{equation}
+\label{MainBound}
+\sum_{n=p+1}^\infty n^{-1}2^n m_{kn} \le A_p B_p
+\end{equation}
+where
+\[
+A^2_p = \sum_{n=p+1}^\infty n^{-2}m_{kn}
+\]
+and
+\[
+B^2_p = \sum_{n=p+1}^\infty 2^{2n} m_{kn}
+\]
+And that is the crux of the problem.  We can just use the integral comparison to get
+\[
+A^2_p \le C(p+1)^{-1}
+\]
+And the second is bounded by 1 by another Cauchy-Schwarz.  Now (\eqref{MainBound}) gives us 
+\[
+\int |f_k| \le C(p+1)^{-1} + p^{-1}
+\]
+Since this holds for all $p <\infty$ we have convergence of $f_k$ to zero.
+
+\section{Reducing The Problem To Central Bound}
+
+We start with the simple bound
+\[
+\int |f_k | \le \sum_{k=1}^\infty 2^n m_{kn}
+\]
+Then we apply carefully Cauchy-Schwarz to the right side rewritten in a special form
+\[
+a_n = \frac{1}{\sqrt{n}} 2^{n/2} \sqrt{m_{kn}}
+\]
+and
+\[
+b_n = \sqrt{n} 2^{n/2} \sqrt{m_{kn}}
+\]
+Then the inequality assumption of Problem 1a gives us
+\[
+\sum_{k=1}^\infty b_n^2 \le 1
+\]
+Cauchy-Schwarz then leads us to the conclusion that
+\[
+\int |f_k| \le \sum_{k=1}^\infty a_n^2.
+\]
+And now the precise estimate of the last section proves the required result that $\int f_k \rightarrow 0$.
+
+\section{Several Hours Of Scribbling Before}
+
+I have a total of ten pages of scribbling for several hours that led to the solution above.  I'll show you two pages.
+
+\includegraphics[scale=0.5]{scrib1.jpg}
+
+\includegraphics[scale=0.5]{scrib2.jpg}
+
+I am showing this because I did not know the right solution path to the problem and was lost for several hours.  That's normal for mathematical problems.  I don't have a feeling a feeling of {\em inadequacy} or {\em inferiority} when I am scribbling quite unsure about where the solution lies.  That is part of mathematical training.  These are Stanford Ph.D. level problems, and they are challenging.  Not knowing the right path is totally normal.  
+
+I am also showing this to emphasize that my solution involves processing of various failed pathways and removing them from a clean solution.  Stanford students taking the examination will be under time pressure and will not have the luxury of this step of cleaning up the issues and writing the clean solution.
+
+
+
+
+\section{Bill Gates Will Not Even Understand The Issues Here}
+
+Bill Gates is quite glib and does not actually understand all that much about mathematics.  It took me two or so hours to fidget before I obtained the path to Problem 1a and even that is not solid yet in rigour.  On one hand, this is a nice subtle problem that shows the delicate nature of getting some estimates using Cauchy-Schwarz in a careful manner.  This is a problem that is new to me, and I've never looked at it.  At least my analytical skills have not vanished.  
+
+But Bill Gates literally thinks that he can do these things because he has special 'white race magic'.  It's not so easy, Bill Gates.  I have spent years at Princeton Real Analysis courses and this was quite a subtle problem that resisted solution for a while.  I want to see if Bill Gates can produce any solution that is valid at all.  Ask him for some actual evidence that he can solve any of the Stanford Ph.D. qualifying problems.
+
+\section{People Like Bill Gates Should Be Shot By Firing Squad}
+
+You see this problem is one probem of Spring 2012 Stanford Analysis Ph.D. exam.  As you can see, it requires training and effort and refined taste that develops over years of real work to resolve them.  People like Bill Gates who harm people like myself with the years of refinement in mathematics or another field ought to be shot to death by firing squad because {\em they} are worthless scumbag who have no skills besides harming people.  They are worthless scumbag who provide no productive value or benefits to the human race and human civilisation at all.  But these worthless wretched scumbags gain wealth by chicanery and deception, and they destroy people like me who have actual genius in serious matters.  The world will never be right till these men like Bill Gates are mercilessly slaughtered in the most bloody manner possible.
+
+\section{Bill Gates Is A High Schooler Who Should Not Be Judging These}
+
+The world is upside down when people without even undergraduate degrees like Bill Gates in any field, let alone mathematics, pretends to have the capability of judging work of people like me who are Princeton University Mathematics graduates with magna cum laude from 1995.  He says "This is high school work".  This is quite rich given that he is unable to do the problem at all, and has no idea what is necessary to solve the problem.  Then he claims that "White people are better at this."  These are retarded hick illiterate moronic ideas.  Mathematics is available as field of interest for anyone of any ethnicity.  It is not ethnicity that grants skills and talent in it but interest, love and effort, a sense of aesthetics of mathematical arguments.  There are no ethnicity-restrictions on these.  But people who are not interested and do not love these issues will not succeed.  
+
+Bill Gates is a horror who is a bad influence on the entire world because his menial stupid white supremacy views poison the entire world.  When people give him credibility, they significantly destroy the human race's ability to procreate mathematical genius by constantly bringing up things irrelevant to mathematics, such as far right and deranged political ideologies.  People who think about ethnic supremacy won't be any good at mathematics.  Mathematic requires focus on much more elevated issues that who should kowtow to whom because their skin tone does not match their tie colour and hairdo.  These sorts of things are inferior level menial low class hick illiterate issues.
+
+
+
+
+
+\end{document}

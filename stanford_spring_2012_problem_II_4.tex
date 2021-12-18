@@ -1,0 +1,60 @@
+\documentclass{amsart}
+\usepackage{graphicx}
+\graphicspath{{./}}
+\usepackage{hyperref}
+\usepackage{csvsimple}
+\usepackage{longtable}
+\usepackage{lscape}
+\usepackage{epigraph}
+\title{Zulf Ruminates On My Undergraduate Functional Analysis And Analysis Education With Stanford Spring 2012 Analysis Problem 4}
+\author{Zulfikar Moinuddin Ahmed}
+\date{\today}
+\begin{document}
+\maketitle
+
+\section{Stanford Analysis Qual Spring 2012 II.4}
+
+Suppose $X$ is a $\mathbf{C}$-vector space and $\mathcal{F}$ a collection of linear functionals.  Equip $X$ with $\mathcal{F}$-weak topology, i.e. weakest topology for which all $f\in\mathcal{F}$ are continuous.  
+
+(a) Show that, with product topologies on $X \times X$ and $\mathbf{C}\times X$, addition and scalar multiplication are continuous.
+
+(b) Suppose $\rho: X \rightarrow [0,\infty)$ is a seminorm.  Show there exists  a finite set $\ell_1,\dots, \ell_N \in \mathcal{F}$ with 
+\[
+\rho(x) \le C \sum_{k=1}^N | \ell_k(x) |
+\]
+
+\section{Thoughts}
+
+Suppose $O \subset X$ is an arbitrary open subset of $X$; then for every $f\in \mathcal{F}$, there exists an open $U_f \subset \mathbf{C}$ such that $f^{-1}( U_f ) = O$.  
+
+Let $p:X\times X\rightarrow X$ be addition and $d: \mathbf{C} \times X \rightarrow X$ be scalar multiplication.
+
+For (a) we want to prove $p^{-1}(O)$ is open and $d^{-1}(O)$ is open in the product topologies.  
+
+Now the product topology is the weakest topology where $\pi_1,\pi_2: X \times X \rightarrow X$ is continuous.
+
+Let's see if we can get somewhere easily, and focus on $p^{-1}(O)$. Write:
+\[
+p^{-1}( O ) = \{ (x,y) \in X \times X: x+y \in O \}
+\]
+Ah, I see,  the trick is to use the fact that translation and multiplication by constant complex numbers preserves open sets in $\mathbf{C}$.  That will do this.
+
+\section{Seminorm Bounds}
+
+This one is more nontrivial, we want to bound an arbitrary seminorm
+\[
+\rho(x) \le C \sum_{k=1}^N | \ell_k(x) |
+\]
+Seminorms are characterised by
+\[
+\rho(x+y)\le rho(x) + \rho(y)
+\]
+and 
+\[
+\rho(sx) = |s| rho(x)
+\]
+I am not sure how to do this yet.  We'll get there, not to worry.
+
+
+
+\end{document}
